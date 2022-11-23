@@ -16,6 +16,10 @@ app.use(cors())
 app.use(authRoutes)
 dotenv.config();
 
+app.get('/', (req, res)=>{
+    res.send('Welcome!')
+})
+
 app.listen(PORT, ()=>{
     console.log(`Server started on PORT: ${PORT}`)
 })
